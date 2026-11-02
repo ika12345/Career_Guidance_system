@@ -46,14 +46,22 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
+If the repository is already open as `D:\ai-project`, that folder is the
+repository root, so do not run `cd Career_Guidance_system` again.
+
 On macOS or Linux, use `python3 -m venv .venv` and
 `source .venv/bin/activate` instead.
 
 ## Run
 
 ```powershell
-streamlit run app.py
+python -m streamlit run app.py
 ```
+
+Using `python -m streamlit` ensures Streamlit runs from the active virtual
+environment instead of a stale global launcher. If the environment is not
+activated, run the command directly with
+`.\.venv\Scripts\python.exe -m streamlit run app.py`.
 
 The app opens at <http://localhost:8501>.
 
